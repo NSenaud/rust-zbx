@@ -12,6 +12,6 @@ crate-type = ["dylib"]
 version = "*"
 
 [dependencies.zbx]
-git = "https://github.com/dnaeon/rust-zbx.git"
-version = "*"
+git = "https://github.com/NSenaud/rust-zbx.git"
+branch = "upgrade-to-rust-1.22"
 
