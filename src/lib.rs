@@ -8,7 +8,6 @@ pub const ZBX_MODULE_OK: c_int = 0;
 pub const ZBX_MODULE_FAIL: c_int = -1;
 
 // Module API versions
-pub const ZBX_MODULE_API_VERSION_ONE: c_int = 2;
 pub const ZBX_MODULE_API_VERSION: c_int = 2;
 
 // Flags for commands

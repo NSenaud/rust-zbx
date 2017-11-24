@@ -8,7 +8,7 @@ use rand::Rng;
 
 #[no_mangle]
 pub extern fn zbx_module_api_version() -> i32 {
-    zbx::ZBX_MODULE_API_VERSION_ONE
+    zbx::ZBX_MODULE_API_VERSION
 }
 
 #[no_mangle]
