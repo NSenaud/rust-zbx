@@ -25,7 +25,7 @@ pub extern fn zbx_module_uninit() -> i32 {
 pub extern fn zbx_module_item_list() -> *const zbx::ZBX_METRIC {
     let metrics = vec![
         zbx::Metric::new("rust.echo", zbx::CF_HAVEPARAMS, rust_echo, ""),
-        zbx::Metric::new("rust.random", zbx::CF_NOPARAMS, rust_random, ""),
+        // zbx::Metric::new("rust.random", zbx::CF_NOPARAMS, rust_random, ""),
     ];
 
     zbx::create_items(&metrics)
@@ -50,13 +50,13 @@ pub extern fn rust_echo(request: *mut zbx::AGENT_REQUEST, result: *mut zbx::AGEN
     zbx::SYSINFO_RET_OK
 }
 
-#[no_mangle]
-#[allow(unused_variables)]
-pub extern fn rust_random(request: *mut zbx::AGENT_REQUEST, result: *mut zbx::AGENT_RESULT) -> i32 {
-    let mut rng = rand::thread_rng();
-    let num = rng.gen::<u64>();
-
-    zbx::AGENT_RESULT::set_uint64_result(result, num);
-
-    zbx::SYSINFO_RET_OK
-}
+// #[no_mangle]
+// #[allow(unused_variables)]
+// pub extern fn rust_random(request: *mut zbx::AGENT_REQUEST, result: *mut zbx::AGENT_RESULT) -> i32 {
+//     let mut rng = rand::thread_rng();
+//     let num = rng.gen::<u64>();
+//
+//     zbx::AGENT_RESULT::set_uint64_result(result, num);
+//
+//     zbx::SYSINFO_RET_OK
+// }
